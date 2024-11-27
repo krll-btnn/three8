@@ -11,15 +11,6 @@ camera.position.z = 5;
 const minZ = -3000;
 const maxZ = 20;
 
-// Элемент для отображения позиции камеры
-// const positionDisplay = document.createElement('div');
-// positionDisplay.style.position = 'absolute';
-// positionDisplay.style.top = '10px';
-// positionDisplay.style.left = '10px';
-// positionDisplay.style.color = 'white';
-// document.body.appendChild(positionDisplay);
-
-// Обработчик события прокрутки мыши
 window.addEventListener('wheel', (event) => {
   event.preventDefault();
 
@@ -30,7 +21,6 @@ window.addEventListener('wheel', (event) => {
   }
 
   camera.position.z = Math.max(minZ, Math.min(maxZ, camera.position.z));
-  // positionDisplay.innerText = `Camera Position Z: ${camera.position.z.toFixed(2)}`;
 });
 
 // Отрисовщик
